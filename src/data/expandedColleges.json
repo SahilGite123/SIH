@@ -1,0 +1,407 @@
+[
+  {
+    "id": 1,
+    "name": "Indian Institute of Technology Delhi",
+    "location": {
+      "address": "Hauz Khas, New Delhi",
+      "latitude": 28.5449,
+      "longitude": 77.1928,
+      "city": "New Delhi",
+      "state": "Delhi"
+    },
+    "type": "Engineering",
+    "courses": ["B.Tech Computer Science", "B.Tech Mechanical", "B.Tech Electrical", "M.Tech", "PhD"],
+    "eligibility": "JEE Advanced",
+    "fees": "₹2.5 LPA",
+    "ranking": 2,
+    "facilities": ["Research Labs", "Library", "Hostel", "Sports Complex", "Placement Cell"],
+    "placements": {
+      "averagePackage": "₹18 LPA",
+      "highestPackage": "₹1.2 Crore",
+      "placementRate": "95%"
+    },
+    "contact": {
+      "phone": "+91-11-2659-1000",
+      "email": "info@iitd.ac.in",
+      "website": "https://home.iitd.ac.in"
+    }
+  },
+  {
+    "id": 2,
+    "name": "All India Institute of Medical Sciences Delhi",
+    "location": {
+      "address": "Ansari Nagar, New Delhi",
+      "latitude": 28.5672,
+      "longitude": 77.2100,
+      "city": "New Delhi",
+      "state": "Delhi"
+    },
+    "type": "Medical",
+    "courses": ["MBBS", "MD", "MS", "DM", "MCh", "PhD"],
+    "eligibility": "NEET UG/PG",
+    "fees": "₹1.4 LPA",
+    "ranking": 1,
+    "facilities": ["Hospital", "Research Centers", "Library", "Hostel", "Trauma Center"],
+    "placements": {
+      "averagePackage": "₹15 LPA",
+      "highestPackage": "₹50 LPA",
+      "placementRate": "100%"
+    },
+    "contact": {
+      "phone": "+91-11-2659-3333",
+      "email": "info@aiims.edu",
+      "website": "https://www.aiims.edu"
+    }
+  },
+  {
+    "id": 3,
+    "name": "Indian Institute of Management Ahmedabad",
+    "location": {
+      "address": "Vastrapur, Ahmedabad",
+      "latitude": 23.0347,
+      "longitude": 72.5020,
+      "city": "Ahmedabad",
+      "state": "Gujarat"
+    },
+    "type": "Management",
+    "courses": ["MBA", "PGPX", "PhD", "Executive Programs"],
+    "eligibility": "CAT/GMAT",
+    "fees": "₹25 LPA",
+    "ranking": 1,
+    "facilities": ["Case Study Rooms", "Library", "Hostel", "Sports Complex", "Alumni Network"],
+    "placements": {
+      "averagePackage": "₹34 LPA",
+      "highestPackage": "₹1.15 Crore",
+      "placementRate": "100%"
+    },
+    "contact": {
+      "phone": "+91-79-6632-4000",
+      "email": "info@iima.ac.in",
+      "website": "https://www.iima.ac.in"
+    }
+  },
+  {
+    "id": 4,
+    "name": "Delhi University - St. Stephen's College",
+    "location": {
+      "address": "University Enclave, Delhi",
+      "latitude": 28.6877,
+      "longitude": 77.2090,
+      "city": "New Delhi",
+      "state": "Delhi"
+    },
+    "type": "Liberal Arts",
+    "courses": ["BA Economics", "BA English", "BA History", "BSc Physics", "BSc Chemistry"],
+    "eligibility": "CUET/12th Merit",
+    "fees": "₹0.5 LPA",
+    "ranking": 1,
+    "facilities": ["Library", "Auditorium", "Sports Ground", "Cafeteria", "Chapel"],
+    "placements": {
+      "averagePackage": "₹8 LPA",
+      "highestPackage": "₹25 LPA",
+      "placementRate": "85%"
+    },
+    "contact": {
+      "phone": "+91-11-2766-7271",
+      "email": "principal@ststephens.edu",
+      "website": "https://www.ststephens.edu"
+    }
+  },
+  {
+    "id": 5,
+    "name": "Indian Statistical Institute Kolkata",
+    "location": {
+      "address": "203 B.T. Road, Kolkata",
+      "latitude": 22.6540,
+      "longitude": 88.3590,
+      "city": "Kolkata",
+      "state": "West Bengal"
+    },
+    "type": "Statistics/Mathematics",
+    "courses": ["BStat", "BMath", "MStat", "MMath", "PhD"],
+    "eligibility": "ISI Admission Test",
+    "fees": "₹1 LPA",
+    "ranking": 1,
+    "facilities": ["Research Labs", "Library", "Computer Center", "Hostel", "Seminar Halls"],
+    "placements": {
+      "averagePackage": "₹12 LPA",
+      "highestPackage": "₹40 LPA",
+      "placementRate": "90%"
+    },
+    "contact": {
+      "phone": "+91-33-2575-2000",
+      "email": "office@isical.ac.in",
+      "website": "https://www.isical.ac.in"
+    }
+  },
+  {
+    "id": 6,
+    "name": "National Law School of India University",
+    "location": {
+      "address": "Nagarbhavi, Bangalore",
+      "latitude": 12.9698,
+      "longitude": 77.5123,
+      "city": "Bangalore",
+      "state": "Karnataka"
+    },
+    "type": "Law",
+    "courses": ["BA LLB", "LLM", "PhD"],
+    "eligibility": "CLAT",
+    "fees": "₹2.2 LPA",
+    "ranking": 1,
+    "facilities": ["Moot Court", "Library", "Hostel", "Sports Complex", "Legal Aid Clinic"],
+    "placements": {
+      "averagePackage": "₹18 LPA",
+      "highestPackage": "₹50 LPA",
+      "placementRate": "95%"
+    },
+    "contact": {
+      "phone": "+91-80-2321-4000",
+      "email": "registrar@nls.ac.in",
+      "website": "https://www.nls.ac.in"
+    }
+  },
+  {
+    "id": 7,
+    "name": "Jamia Millia Islamia",
+    "location": {
+      "address": "Jamia Nagar, New Delhi",
+      "latitude": 28.5615,
+      "longitude": 77.2800,
+      "city": "New Delhi",
+      "state": "Delhi"
+    },
+    "type": "Central University",
+    "courses": ["BA", "BSc", "B.Tech", "MBA", "MA", "MSc", "PhD"],
+    "eligibility": "CUET/JEE/CAT",
+    "fees": "₹0.8 LPA",
+    "ranking": 12,
+    "facilities": ["Library", "Hostel", "Sports Complex", "Medical Center", "Cultural Center"],
+    "placements": {
+      "averagePackage": "₹6 LPA",
+      "highestPackage": "₹25 LPA",
+      "placementRate": "75%"
+    },
+    "contact": {
+      "phone": "+91-11-2698-1717",
+      "email": "info@jmi.ac.in",
+      "website": "https://www.jmi.ac.in"
+    }
+  },
+  {
+    "id": 8,
+    "name": "Banaras Hindu University",
+    "location": {
+      "address": "Varanasi, Uttar Pradesh",
+      "latitude": 25.2677,
+      "longitude": 82.9913,
+      "city": "Varanasi",
+      "state": "Uttar Pradesh"
+    },
+    "type": "Central University",
+    "courses": ["BA", "BSc", "B.Tech", "MBBS", "MBA", "MA", "MSc", "PhD"],
+    "eligibility": "BHU UET/NEET/CUET",
+    "fees": "₹1.2 LPA",
+    "ranking": 10,
+    "facilities": ["Hospital", "Library", "Hostel", "Sports Complex", "Museum"],
+    "placements": {
+      "averagePackage": "₹7 LPA",
+      "highestPackage": "₹30 LPA",
+      "placementRate": "80%"
+    },
+    "contact": {
+      "phone": "+91-542-230-7000",
+      "email": "info@bhu.ac.in",
+      "website": "https://www.bhu.ac.in"
+    }
+  },
+  {
+    "id": 9,
+    "name": "Jadavpur University",
+    "location": {
+      "address": "Raja S.C. Mallick Road, Kolkata",
+      "latitude": 22.4991,
+      "longitude": 88.3712,
+      "city": "Kolkata",
+      "state": "West Bengal"
+    },
+    "type": "State University",
+    "courses": ["BE", "BTech", "BA", "BSc", "ME", "MTech", "MA", "MSc", "PhD"],
+    "eligibility": "WBJEE/CUET",
+    "fees": "₹0.5 LPA",
+    "ranking": 8,
+    "facilities": ["Research Labs", "Library", "Hostel", "Sports Ground", "Cultural Center"],
+    "placements": {
+      "averagePackage": "₹9 LPA",
+      "highestPackage": "₹42 LPA",
+      "placementRate": "85%"
+    },
+    "contact": {
+      "phone": "+91-33-2414-6666",
+      "email": "registrar@jaduniv.edu.in",
+      "website": "https://www.jaduniv.edu.in"
+    }
+  },
+  {
+    "id": 10,
+    "name": "Loyola College Chennai",
+    "location": {
+      "address": "Nungambakkam, Chennai",
+      "latitude": 13.0732,
+      "longitude": 80.2609,
+      "city": "Chennai",
+      "state": "Tamil Nadu"
+    },
+    "type": "Arts & Science",
+    "courses": ["BA", "BSc", "BBA", "BCA", "MA", "MSc", "MBA", "MCA"],
+    "eligibility": "12th Merit/Entrance",
+    "fees": "₹1.5 LPA",
+    "ranking": 3,
+    "facilities": ["Library", "Labs", "Hostel", "Sports Complex", "Chapel"],
+    "placements": {
+      "averagePackage": "₹5 LPA",
+      "highestPackage": "₹15 LPA",
+      "placementRate": "90%"
+    },
+    "contact": {
+      "phone": "+91-44-2817-8200",
+      "email": "principal@loyolacollege.edu",
+      "website": "https://www.loyolacollege.edu"
+    }
+  },
+  {
+    "id": 11,
+    "name": "Government Degree College, Jammu",
+    "location": {
+      "address": "Canal Road, Jammu",
+      "latitude": 32.7319,
+      "longitude": 74.8569,
+      "city": "Jammu",
+      "state": "Jammu & Kashmir"
+    },
+    "type": "Government College",
+    "courses": ["BA", "BSc", "B.Com"],
+    "eligibility": "10+2 Pass",
+    "fees": "₹0.2 LPA",
+    "ranking": 50,
+    "facilities": ["Library", "Labs", "Sports Complex", "Canteen"],
+    "placements": {
+      "averagePackage": "₹3 LPA",
+      "highestPackage": "₹8 LPA",
+      "placementRate": "60%"
+    },
+    "contact": {
+      "phone": "+91-191-254-8000",
+      "email": "gdcjammu@gmail.com",
+      "website": "https://www.gdcjammu.ac.in"
+    }
+  },
+  {
+    "id": 12,
+    "name": "Government College for Women, Srinagar",
+    "location": {
+      "address": "M.A. Road, Srinagar",
+      "latitude": 34.0881,
+      "longitude": 74.8037,
+      "city": "Srinagar",
+      "state": "Jammu & Kashmir"
+    },
+    "type": "Women's College",
+    "courses": ["BA", "BSc", "B.Com", "MA", "MSc"],
+    "eligibility": "10+2 Pass",
+    "fees": "₹0.15 LPA",
+    "ranking": 45,
+    "facilities": ["Hostel", "Auditorium", "Cafeteria", "Library", "Computer Lab"],
+    "placements": {
+      "averagePackage": "₹2.5 LPA",
+      "highestPackage": "₹6 LPA",
+      "placementRate": "55%"
+    },
+    "contact": {
+      "phone": "+91-194-245-2000",
+      "email": "gcwsrinagar@gmail.com",
+      "website": "https://www.gcwsrinagar.edu.in"
+    }
+  },
+  {
+    "id": 13,
+    "name": "Manipal Institute of Technology",
+    "location": {
+      "address": "Manipal, Karnataka",
+      "latitude": 13.3525,
+      "longitude": 74.7869,
+      "city": "Manipal",
+      "state": "Karnataka"
+    },
+    "type": "Private Engineering",
+    "courses": ["B.Tech", "M.Tech", "MBA", "PhD"],
+    "eligibility": "MET/JEE Main",
+    "fees": "₹17 LPA",
+    "ranking": 15,
+    "facilities": ["Research Centers", "Library", "Hostel", "Sports Complex", "Innovation Center"],
+    "placements": {
+      "averagePackage": "₹8 LPA",
+      "highestPackage": "₹45 LPA",
+      "placementRate": "90%"
+    },
+    "contact": {
+      "phone": "+91-820-292-3000",
+      "email": "info@manipal.edu",
+      "website": "https://www.manipal.edu"
+    }
+  },
+  {
+    "id": 14,
+    "name": "Christ University Bangalore",
+    "location": {
+      "address": "Hosur Road, Bangalore",
+      "latitude": 12.9342,
+      "longitude": 77.6101,
+      "city": "Bangalore",
+      "state": "Karnataka"
+    },
+    "type": "Private University",
+    "courses": ["BA", "BSc", "B.Tech", "BBA", "MBA", "MA", "MSc", "PhD"],
+    "eligibility": "CUET/University Entrance",
+    "fees": "₹3 LPA",
+    "ranking": 20,
+    "facilities": ["Library", "Hostel", "Sports Complex", "Auditorium", "Chapel"],
+    "placements": {
+      "averagePackage": "₹6 LPA",
+      "highestPackage": "₹20 LPA",
+      "placementRate": "85%"
+    },
+    "contact": {
+      "phone": "+91-80-4012-9100",
+      "email": "info@christuniversity.in",
+      "website": "https://www.christuniversity.in"
+    }
+  },
+  {
+    "id": 15,
+    "name": "Symbiosis International University",
+    "location": {
+      "address": "Lavale, Pune",
+      "latitude": 18.5679,
+      "longitude": 73.7333,
+      "city": "Pune",
+      "state": "Maharashtra"
+    },
+    "type": "Private University",
+    "courses": ["BA", "BSc", "B.Tech", "BBA", "MBA", "Law", "Design"],
+    "eligibility": "SET/SNAP/SLAT",
+    "fees": "₹8 LPA",
+    "ranking": 25,
+    "facilities": ["International Center", "Library", "Hostel", "Sports Complex", "Innovation Lab"],
+    "placements": {
+      "averagePackage": "₹7 LPA",
+      "highestPackage": "₹35 LPA",
+      "placementRate": "88%"
+    },
+    "contact": {
+      "phone": "+91-20-2811-3000",
+      "email": "info@siu.edu.in",
+      "website": "https://www.siu.edu.in"
+    }
+  }
+]

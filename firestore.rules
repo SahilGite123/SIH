@@ -1,0 +1,72 @@
+rules_version = '2';
+service cloud.firestore {
+  match /databases/{database}/documents {
+    function isSignedIn() { return request.auth != null; }
+    function isAdmin() {
+      return isSignedIn() &&
+        get(/databases/$(database)/documents/users/$(request.auth.uid)).data.role == 'admin';
+    }
+    function isOwner(uid) { return isSignedIn() && request.auth.uid == uid; }
+
+    // Users collection - users manage their own profile; admins can read/write all
+    match /users/{userId} {
+      allow read: if isOwner(userId) || isAdmin();
+      allow write: if isOwner(userId) || isAdmin();
+
+      // User cart as subcollection: users can manage only their own cart items
+      match /cartItems/{itemId} {
+        allow read, create: if isOwner(userId);
+        allow update, delete: if isOwner(userId);
+      }
+    }
+
+    // Products (admin-managed). Everyone signed-in can read; only admins can write.
+    match /products/{productId} {
+      allow read: if isSignedIn();
+      allow create, update, delete: if isAdmin();
+    }
+
+    // Orders: Users can create and read their own; admins can read/write all.
+    match /orders/{orderId} {
+      allow create: if isSignedIn() && request.resource.data.uid == request.auth.uid;
+      allow read: if isAdmin() || (isSignedIn() && resource.data.uid == request.auth.uid);
+      allow update, delete: if isAdmin();
+    }
+
+    // Quiz results - users can read/write their own results, admins can read all
+    match /quizResults/{userId} {
+      allow read, write: if isOwner(userId) || isAdmin();
+    }
+
+    // Admin-managed content collections
+    match /quizQuestions/{document} {
+      allow read: if isSignedIn();
+      allow write: if isAdmin();
+    }
+    match /colleges/{document} {
+      allow read: if isSignedIn();
+      allow write: if isAdmin();
+    }
+    match /courses/{document} {
+      allow read: if isSignedIn();
+      allow write: if isAdmin();
+    }
+
+    // Career paths collection for roadmaps
+    match /career_paths/{pathId} {
+      allow read: if isSignedIn();
+      allow write: if isAdmin();
+    }
+
+    // Per-user AI guidance
+    match /guidance/{userId} {
+      allow read: if isOwner(userId) || isAdmin();
+      allow write: if isOwner(userId) || isAdmin();
+    }
+
+    // Legacy collections for backward compatibility (read-only for signed-in users)
+    match /quizzes/{quizId} { allow read: if isSignedIn(); }
+    match /degrees/{degreeId} { allow read: if isSignedIn(); }
+    match /guardians/{guardianId} { allow read: if isSignedIn(); }
+  }
+}

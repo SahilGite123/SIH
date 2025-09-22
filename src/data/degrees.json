@@ -1,0 +1,82 @@
+[
+  {
+    "id": "bsc",
+    "name": "Bachelor of Science (B.Sc)",
+    "streams": ["Science"],
+    "description": "A bachelor's degree focused on scientific disciplines.",
+    "higher_studies": [
+      {"name": "M.Sc", "description": "Master of Science"},
+      {"name": "Ph.D.", "description": "Doctor of Philosophy"}
+    ],
+    "job_roles": [
+      {"name": "Research Scientist", "description": "Conducts scientific research"},
+      {"name": "Data Analyst", "description": "Analyzes data to extract insights"},
+      {"name": "Lab Technician", "description": "Performs laboratory tests"}
+    ],
+    "relevant_exams": ["JEE", "NEET", "GATE"]
+  },
+  {
+    "id": "ba",
+    "name": "Bachelor of Arts (B.A)",
+    "streams": ["Arts"],
+    "description": "A bachelor's degree focused on humanities, social sciences, and liberal arts.",
+    "higher_studies": [
+      {"name": "M.A", "description": "Master of Arts"},
+      {"name": "Ph.D.", "description": "Doctor of Philosophy"}
+    ],
+    "job_roles": [
+      {"name": "Content Writer", "description": "Creates written content"},
+      {"name": "Journalist", "description": "Gathers and reports news"},
+      {"name": "Social Worker", "description": "Helps individuals and communities"}
+    ],
+    "relevant_exams": ["UPSC", "SSC CGL"]
+  },
+  {
+    "id": "bcom",
+    "name": "Bachelor of Commerce (B.Com)",
+    "streams": ["Commerce"],
+    "description": "A bachelor's degree focused on commerce, accounting, finance, and economics.",
+    "higher_studies": [
+      {"name": "M.Com", "description": "Master of Commerce"},
+      {"name": "MBA", "description": "Master of Business Administration"}
+    ],
+    "job_roles": [
+      {"name": "Accountant", "description": "Manages financial records"},
+      {"name": "Financial Analyst", "description": "Evaluates financial performance"},
+      {"name": "Business Consultant", "description": "Provides business advice"}
+    ],
+    "relevant_exams": ["CA", "CS", "CMA"]
+  },
+  {
+    "id": "btech",
+    "name": "Bachelor of Technology (B.Tech)",
+    "streams": ["Science"],
+    "description": "A professional engineering undergraduate degree.",
+    "higher_studies": [
+      {"name": "M.Tech", "description": "Master of Technology"},
+      {"name": "MS", "description": "Master of Science"}
+    ],
+    "job_roles": [
+      {"name": "Software Engineer", "description": "Develops software applications"},
+      {"name": "Civil Engineer", "description": "Designs and builds infrastructure"},
+      {"name": "Mechanical Engineer", "description": "Designs and analyzes mechanical systems"}
+    ],
+    "relevant_exams": ["GATE", "GRE"]
+  },
+  {
+    "id": "mbbs",
+    "name": "Bachelor of Medicine, Bachelor of Surgery (MBBS)",
+    "streams": ["Science"],
+    "description": "A professional undergraduate medical degree.",
+    "higher_studies": [
+      {"name": "MD", "description": "Doctor of Medicine"},
+      {"name": "MS", "description": "Master of Surgery"}
+    ],
+    "job_roles": [
+      {"name": "Doctor", "description": "Diagnoses and treats illnesses"},
+      {"name": "Surgeon", "description": "Performs medical operations"},
+      {"name": "Medical Researcher", "description": "Conducts medical research"}
+    ],
+    "relevant_exams": ["NEET PG"]
+  }
+]

@@ -1,0 +1,34 @@
+[
+  {
+    "state": "Maharashtra",
+    "trendingRoles": [
+      { "role": "Software Engineer", "growthIndex": 8.7 },
+      { "role": "Data Analyst", "growthIndex": 8.1 },
+      { "role": "Digital Marketing Specialist", "growthIndex": 7.6 }
+    ]
+  },
+  {
+    "state": "Karnataka",
+    "trendingRoles": [
+      { "role": "Machine Learning Engineer", "growthIndex": 9.1 },
+      { "role": "Full Stack Developer", "growthIndex": 8.9 },
+      { "role": "Cloud Engineer", "growthIndex": 8.4 }
+    ]
+  },
+  {
+    "state": "Delhi",
+    "trendingRoles": [
+      { "role": "Business Analyst", "growthIndex": 8.2 },
+      { "role": "Cybersecurity Analyst", "growthIndex": 8.0 },
+      { "role": "HR Specialist", "growthIndex": 7.4 }
+    ]
+  },
+  {
+    "state": "Tamil Nadu",
+    "trendingRoles": [
+      { "role": "Embedded Systems Engineer", "growthIndex": 8.3 },
+      { "role": "Automation Test Engineer", "growthIndex": 8.0 },
+      { "role": "UI/UX Designer", "growthIndex": 7.7 }
+    ]
+  }
+]

@@ -1,0 +1,122 @@
+[
+  {
+    "id": 1,
+    "question": "I enjoy solving complex problems and puzzles.",
+    "options": [
+      { "text": "Strongly Disagree", "value": 1 },
+      { "text": "Disagree", "value": 2 },
+      { "text": "Neutral", "value": 3 },
+      { "text": "Agree", "value": 4 },
+      { "text": "Strongly Agree", "value": 5 }
+    ],
+    "category": "Science"
+  },
+  {
+    "id": 2,
+    "question": "I am fascinated by scientific discoveries and how things work.",
+    "options": [
+      { "text": "Strongly Disagree", "value": 1 },
+      { "text": "Disagree", "value": 2 },
+      { "text": "Neutral", "value": 3 },
+      { "text": "Agree", "value": 4 },
+      { "text": "Strongly Agree", "value": 5 }
+    ],
+    "category": "Science"
+  },
+  {
+    "id": 3,
+    "question": "I prefer subjects like Physics, Chemistry, and Biology.",
+    "options": [
+      { "text": "Strongly Disagree", "value": 1 },
+      { "text": "Disagree", "value": 2 },
+      { "text": "Neutral", "value": 3 },
+      { "text": "Agree", "value": 4 },
+      { "text": "Strongly Agree", "value": 5 }
+    ],
+    "category": "Science"
+  },
+  {
+    "id": 4,
+    "question": "I like to express my ideas through writing, art, or music.",
+    "options": [
+      { "text": "Strongly Disagree", "value": 1 },
+      { "text": "Disagree", "value": 2 },
+      { "text": "Neutral", "value": 3 },
+      { "text": "Agree", "value": 4 },
+      { "text": "Strongly Agree", "value": 5 }
+    ],
+    "category": "Arts"
+  },
+  {
+    "id": 5,
+    "question": "I enjoy reading and learning about history, literature, or philosophy.",
+    "options": [
+      { "text": "Strongly Disagree", "value": 1 },
+      { "text": "Disagree", "value": 2 },
+      { "text": "Neutral", "value": 3 },
+      { "text": "Agree", "value": 4 },
+      { "text": "Strongly Agree", "value": 5 }
+    ],
+    "category": "Arts"
+  },
+  {
+    "id": 6,
+    "question": "I am good at understanding and analyzing human behavior and societies.",
+    "options": [
+      { "text": "Strongly Disagree", "value": 1 },
+      { "text": "Disagree", "value": 2 },
+      { "text": "Neutral", "value": 3 },
+      { "text": "Agree", "value": 4 },
+      { "text": "Strongly Agree", "value": 5 }
+    ],
+    "category": "Arts"
+  },
+  {
+    "id": 7,
+    "question": "I am interested in business, finance, and economics.",
+    "options": [
+      { "text": "Strongly Disagree", "value": 1 },
+      { "text": "Disagree", "value": 2 },
+      { "text": "Neutral", "value": 3 },
+      { "text": "Agree", "value": 4 },
+      { "text": "Strongly Agree", "value": 5 }
+    ],
+    "category": "Commerce"
+  },
+  {
+    "id": 8,
+    "question": "I enjoy working with numbers and managing money.",
+    "options": [
+      { "text": "Strongly Disagree", "value": 1 },
+      { "text": "Disagree", "value": 2 },
+      { "text": "Neutral", "value": 3 },
+      { "text": "Agree", "value": 4 },
+      { "text": "Strongly Agree", "value": 5 }
+    ],
+    "category": "Commerce"
+  },
+  {
+    "id": 9,
+    "question": "I am good at organizing and planning events or projects.",
+    "options": [
+      { "text": "Strongly Disagree", "value": 1 },
+      { "text": "Disagree", "value": 2 },
+      { "text": "Neutral", "value": 3 },
+      { "text": "Agree", "value": 4 },
+      { "text": "Strongly Agree", "value": 5 }
+    ],
+    "category": "Commerce"
+  },
+  {
+    "id": 10,
+    "question": "I am curious about different cultures and societies.",
+    "options": [
+      { "text": "Strongly Disagree", "value": 1 },
+      { "text": "Disagree", "value": 2 },
+      { "text": "Neutral", "value": 3 },
+      { "text": "Agree", "value": 4 },
+      { "text": "Strongly Agree", "value": 5 }
+    ],
+    "category": "Arts"
+  }
+]

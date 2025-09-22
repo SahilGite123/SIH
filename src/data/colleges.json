@@ -1,0 +1,122 @@
+[
+  {
+    "id": 1,
+    "name": "Government Degree College, Jammu",
+    "location": {
+      "address": "Canal Road, Jammu",
+      "latitude": 32.7319,
+      "longitude": 74.8569
+    },
+    "courses": ["B.Sc", "B.A", "B.Com"],
+    "eligibility": "10+2 Pass",
+    "facilities": ["Library", "Labs", "Sports Complex"]
+  },
+  {
+    "id": 2,
+    "name": "Government College for Women, Srinagar",
+    "location": {
+      "address": "M.A. Road, Srinagar",
+      "latitude": 34.0881,
+      "longitude": 74.8037
+    },
+    "courses": ["B.Sc Home Science", "B.A Psychology", "B.Com"],
+    "eligibility": "10+2 Pass",
+    "facilities": ["Hostel", "Auditorium", "Cafeteria"]
+  },
+  {
+    "id": 3,
+    "name": "Amar Singh College, Srinagar",
+    "location": {
+      "address": "Gogji Bagh, Srinagar",
+      "latitude": 34.0673,
+      "longitude": 74.8055
+    },
+    "courses": ["B.Sc IT", "B.A Sociology", "B.Com Hons"],
+    "eligibility": "10+2 Pass",
+    "facilities": ["Digital Classrooms", "Gym", "Transport"]
+  },
+  {
+    "id": 4,
+    "name": "Government Degree College, Udhampur",
+    "location": {
+      "address": "Dhar Road, Udhampur",
+      "latitude": 32.9298,
+      "longitude": 75.1408
+    },
+    "courses": ["B.Sc Medical", "B.A History", "B.Com General"],
+    "eligibility": "10+2 Pass",
+    "facilities": ["NCC", "NSS", "Botanical Garden"]
+  },
+  {
+    "id": 5,
+    "name": "Government Degree College, Kathua",
+    "location": {
+      "address": "College Road, Kathua",
+      "latitude": 32.3789,
+      "longitude": 75.5098
+    },
+    "courses": ["BBA", "BCA", "B.Sc Non-Medical"],
+    "eligibility": "10+2 Pass",
+    "facilities": ["Computer Lab", "Placement Cell", "Sports Ground"]
+  },
+  {
+    "id": 6,
+    "name": "GDC Baramulla",
+    "location": {
+      "address": "Khawaja Bagh, Baramulla",
+      "latitude": 34.2001,
+      "longitude": 74.3644
+    },
+    "courses": ["B.A English", "B.Sc Chemistry", "B.Com"],
+    "eligibility": "10+2 Pass",
+    "facilities": ["Library", "Hostel", "Wi-Fi"]
+  },
+  {
+    "id": 7,
+    "name": "GDC Anantnag",
+    "location": {
+      "address": "Khanabal, Anantnag",
+      "latitude": 33.7291,
+      "longitude": 75.1491
+    },
+    "courses": ["B.Sc Physics", "B.A Political Science", "B.Com"],
+    "eligibility": "10+2 Pass",
+    "facilities": ["Auditorium", "Canteen", "Medical Unit"]
+  },
+  {
+    "id": 8,
+    "name": "GDC Rajouri",
+    "location": {
+      "address": "Near PHC, Rajouri",
+      "latitude": 33.3824,
+      "longitude": 74.3168
+    },
+    "courses": ["B.Sc Zoology", "B.A Economics", "B.Com"],
+    "eligibility": "10+2 Pass",
+    "facilities": ["Labs", "Sports Ground", "Counseling Cell"]
+  },
+  {
+    "id": 9,
+    "name": "GDC Poonch",
+    "location": {
+      "address": "Mandi Road, Poonch",
+      "latitude": 33.7667,
+      "longitude": 74.1033
+    },
+    "courses": ["B.Sc Botany", "B.A Geography", "B.Com"],
+    "eligibility": "10+2 Pass",
+    "facilities": ["Library", "Computer Lab", "Common Room"]
+  },
+  {
+    "id": 10,
+    "name": "GDC Leh",
+    "location": {
+      "address": "Skara, Leh",
+      "latitude": 34.1526,
+      "longitude": 77.5770
+    },
+    "courses": ["B.A Buddhist Studies", "B.Sc Environmental Science", "B.Com"],
+    "eligibility": "10+2 Pass",
+    "facilities": ["Research Center", "Hostel", "Cafeteria"]
+  }
+]
