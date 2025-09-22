@@ -14,6 +14,8 @@ function AlternativePaths() {
   const [alternativePaths, setAlternativePaths] = useState([]);
   const [loading, setLoading] = useState(true);
   const [selectedAspiration, setSelectedAspiration] = useState('');
+  const [isCollegesOpen, setIsCollegesOpen] = useState(false);
+  const [collegesForModal, setCollegesForModal] = useState([]);
 
   const commonAspirations = [
     'Doctor', 'Engineer', 'Teacher', 'Lawyer', 'Business Owner', 
@@ -58,6 +60,25 @@ function AlternativePaths() {
         setLoading(false);
       }
     }
+  };
+
+  const isJKCollege = (c) => {
+    const addr = String(c?.location?.address || '').toLowerCase();
+    const markers = ['jammu', 'srinagar', 'kashmir', 'baramulla', 'anantnag', 'kathua', 'rajouri', 'poonch', 'leh', 'ladakh', 'udhampur', 'j&k', 'jammu and kashmir'];
+    return markers.some((m) => addr.includes(m));
+  };
+
+  const openCollegesModal = (colleges = []) => {
+    // Reverted: prefer the provided nearbyColleges for the path; if missing, show all.
+    const list = Array.isArray(colleges) && colleges.length ? colleges : collegesData;
+    const sorted = [...list].sort((a, b) => Number(isJKCollege(b)) - Number(isJKCollege(a)));
+    setCollegesForModal(sorted);
+    setIsCollegesOpen(true);
+  };
+
+  const closeCollegesModal = () => {
+    setIsCollegesOpen(false);
+    setCollegesForModal([]);
   };
 
   const generateAlternativePaths = (aspiration) => {
@@ -514,6 +535,13 @@ function AlternativePaths() {
                         </div>
                       ))}
                     </div>
+                    <button
+                      type="button"
+                      onClick={() => openCollegesModal(path.nearbyColleges)}
+                      className="mt-3 inline-flex items-center gap-2 px-3 py-2 rounded-md text-sm font-medium text-white bg-indigo-600 hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-indigo-400"
+                    >
+                      View Colleges
+                    </button>
                   </div>
                 </div>
               ))}
@@ -542,6 +570,51 @@ function AlternativePaths() {
           </div>
         )}
       </div>
+      {/* Colleges Modal */}
+      {isCollegesOpen && (
+        <div className="fixed inset-0 z-50 flex items-center justify-center p-4">
+          <div className="absolute inset-0 bg-black/40" onClick={closeCollegesModal} />
+          <div className="relative z-10 w-full max-w-5xl transform rounded-lg bg-white p-6 shadow-xl transition-all duration-200 ease-out scale-95 opacity-0 animate-[fadeIn_200ms_ease-out_forwards]">
+            <div className="flex items-center justify-between mb-4">
+              <h3 className="text-xl font-semibold">Nearby Colleges</h3>
+              <button
+                type="button"
+                onClick={closeCollegesModal}
+                className="rounded-md p-2 text-gray-500 hover:text-gray-700 hover:bg-gray-100"
+                aria-label="Close"
+              >
+                ✕
+              </button>
+            </div>
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 max-h-[70vh] overflow-auto pr-1">
+              {collegesForModal.map((c) => (
+                <div key={c.id} className="rounded-lg border border-gray-200 bg-white p-5 shadow-sm hover:shadow-md transition-shadow">
+                  <h4 className="text-xl font-semibold text-gray-900 mb-3">{c.name}</h4>
+                  <div className="text-sm text-gray-800 space-y-1">
+                    <p><span className="font-semibold">Location:</span> <span className="text-gray-700">{c.location?.address}</span></p>
+                    <p><span className="font-semibold">Courses:</span> <span className="text-gray-700">{Array.isArray(c.courses) ? c.courses.join(', ') : ''}</span></p>
+                    <p><span className="font-semibold">Eligibility:</span> <span className="text-gray-700">{c.eligibility}</span></p>
+                    <p className="mb-2"><span className="font-semibold">Facilities:</span> <span className="text-gray-700">{Array.isArray(c.facilities) ? c.facilities.join(', ') : ''}</span></p>
+                    {c.location?.latitude && c.location?.longitude && (
+                      <a
+                        href={`https://www.google.com/maps?q=${c.location.latitude},${c.location.longitude}`}
+                        target="_blank"
+                        rel="noreferrer"
+                        className="text-indigo-600 underline hover:text-indigo-700"
+                      >
+                        View on Google Maps
+                      </a>
+                    )}
+                  </div>
+                </div>
+              ))}
+              {collegesForModal.length === 0 && (
+                <div className="text-center text-gray-600">No colleges data available.</div>
+              )}
+            </div>
+          </div>
+        </div>
+      )}
     </div>
   );
 }

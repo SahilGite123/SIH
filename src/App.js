@@ -82,7 +82,7 @@ function App() {
               <Route path="/alternative-paths" element={<Layout><AlternativePaths /></Layout>} />
               <Route path="/parent-portal" element={<Layout><ParentPortal /></Layout>} />
               <Route path="/timeline" element={<Layout><Timeline /></Layout>} />
-              <Route path="/resources" element={<Layout><Resources /></Layout>} />
+              {/* <Route path="/resources" element={<Layout><Resources /></Layout>} />  */}
               <Route path="/simulator" element={<Layout><Simulator /></Layout>} />
               <Route path="/analytics" element={<Layout><Analytics /></Layout>} />
               <Route path="/notifications" element={<Layout><NotificationsCenter /></Layout>} />

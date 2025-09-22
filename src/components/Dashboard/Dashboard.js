@@ -47,6 +47,27 @@ function Dashboard() {
     }
   };
 
+  // Build and sort chart data by score (descending)
+  const categories = [
+    { label: 'Engineering', score: (quizResults?.scores?.Science ?? 0) }, // Engineering derived from Science (PCM)
+    { label: 'Medical', score: (quizResults?.scores?.Science ?? 0) },     // Medical derived from Science (PCB)
+    { label: 'Commerce', score: (quizResults?.scores?.Commerce ?? 0) },
+    { label: 'Arts', score: (quizResults?.scores?.Arts ?? 0) },
+  ];
+
+  const colorMap = {
+    Engineering: { bg: '#3B82F6', border: '#2563EB' },
+    Medical: { bg: '#10B981', border: '#059669' },
+    Commerce: { bg: '#F59E0B', border: '#D97706' },
+    Arts: { bg: '#6366F1', border: '#4F46E5' },
+  };
+
+  const sorted = [...categories].sort((a, b) => b.score - a.score);
+  const barLabels = sorted.map((c) => c.label);
+  const barData = sorted.map((c) => c.score);
+  const backgroundColors = sorted.map((c) => colorMap[c.label].bg);
+  const borderColors = sorted.map((c) => colorMap[c.label].border);
+
   const getGreeting = () => {
     const hour = currentTime.getHours();
     if (hour < 12) return 'Good Morning';
@@ -67,11 +88,21 @@ function Dashboard() {
     const maxStream = Object.keys(quizResults.scores).reduce((a, b) => 
       quizResults.scores[a] > quizResults.scores[b] ? a : b
     );
+
+    // Map quiz score key to Careers stream param
+    const toStreamParam = (k) => {
+      const l = String(k).toLowerCase();
+      if (l.includes('science')) return 'science';
+      if (l.includes('commerce')) return 'commerce';
+      if (l.includes('arts')) return 'arts';
+      return 'all';
+    };
+    const streamParam = toStreamParam(maxStream);
     
     return {
       title: `Explore ${maxStream} Careers`,
       description: `Based on your quiz results, you show strong aptitude in ${maxStream}. Explore career opportunities in this field.`,
-      link: '/careers',
+      link: `/careers?stream=${streamParam}`,
       color: 'bg-green-500'
     };
   };
@@ -209,17 +240,12 @@ function Dashboard() {
                   <Bar 
                     ref={barRef}
                     data={{
-                      labels: ['Engineering', 'Medical', 'Commerce', 'Arts'],
+                      labels: barLabels,
                       datasets: [{
                         label: 'Your Scores',
-                        data: [
-                          (quizResults.scores?.Science ?? 0), // Engineering derived from Science (PCM)
-                          (quizResults.scores?.Science ?? 0), // Medical derived from Science (PCB)
-                          (quizResults.scores?.Commerce ?? 0),
-                          (quizResults.scores?.Arts ?? 0),
-                        ],
-                        backgroundColor: ['#3B82F6', '#10B981', '#F59E0B'],
-                        borderColor: ['#2563EB', '#059669', '#D97706'],
+                        data: barData,
+                        backgroundColor: backgroundColors,
+                        borderColor: borderColors,
                         borderWidth: 2,
                         borderRadius: 8,
                       }]

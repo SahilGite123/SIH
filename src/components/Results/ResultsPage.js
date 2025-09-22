@@ -38,12 +38,20 @@ export default function ResultsPage() {
         }
         setScores(q.data.scores);
 
-        // Use saved predictions if present, else recompute
-        let preds = q.data.predictions;
-        if (!Array.isArray(preds) || preds.length === 0) {
-          const predRes = mlModel.predict(q.data.scores || {});
-          preds = predRes?.predictions || [];
-        }
+        // Derive predictions directly from the 4-category chart to stay consistent with visuals
+        const s = q.data.scores || {};
+        const four = [
+          { domain: 'Engineering', score: (s.Science ?? 0) },
+          { domain: 'Medical', score: (s.Science ?? 0) },
+          { domain: 'Commerce', score: (s.Commerce ?? 0) },
+          { domain: 'Arts', score: (s.Arts ?? 0) },
+        ];
+        const sortedFour = [...four].sort((a, b) => b.score - a.score);
+        const sum = sortedFour.reduce((acc, it) => acc + Math.max(it.score, 0), 0) || 1;
+        const preds = sortedFour.slice(0, 3).map(it => ({
+          domain: it.domain,
+          confidence: Number((Math.max(it.score, 0) / sum).toFixed(4))
+        }));
         setPredictions(preds);
 
         // Resolve main + alternate career paths
@@ -71,13 +79,33 @@ export default function ResultsPage() {
     })();
   }, []);
 
+  // Build 4 categories to mirror Dashboard (Engineering, Medical, Commerce, Arts)
+  const categories = scores ? [
+    { label: 'Engineering', score: (scores?.Science ?? 0) }, // from Science (PCM)
+    { label: 'Medical', score: (scores?.Science ?? 0) },     // from Science (PCB)
+    { label: 'Commerce', score: (scores?.Commerce ?? 0) },
+    { label: 'Arts', score: (scores?.Arts ?? 0) },
+  ] : [];
+
+  const colorMap = {
+    Engineering: '#3B82F6', // blue
+    Medical: '#10B981',     // green
+    Commerce: '#F59E0B',    // orange
+    Arts: '#6366F1',        // indigo
+  };
+
+  const sortedCats = [...categories].sort((a, b) => b.score - a.score);
+  const labels = sortedCats.map(c => c.label);
+  const values = sortedCats.map(c => c.score);
+  const colors = sortedCats.map(c => colorMap[c.label]);
+
   const data = scores ? {
-    labels: Object.keys(scores),
+    labels,
     datasets: [
       {
         label: 'Your Score',
-        data: Object.values(scores),
-        backgroundColor: ['#6366f1', '#22c55e', '#f97316'],
+        data: values,
+        backgroundColor: colors,
         borderWidth: 0,
       },
     ],

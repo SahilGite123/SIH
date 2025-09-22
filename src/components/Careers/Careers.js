@@ -1,4 +1,5 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
+import { useLocation } from 'react-router-dom';
 import { useTranslation } from 'react-i18next';
 import { expandedCareers } from '../../data/expandedCareers';
 import degreesData from '../../data/degrees.json';
@@ -10,6 +11,29 @@ function Careers() {
   const [searchTerm, setSearchTerm] = useState('');
   const [openCareerIds, setOpenCareerIds] = useState(new Set());
   const [selectedState, setSelectedState] = useState(laborTrends[0]?.state || '');
+  const location = useLocation();
+
+  // Pre-select stream from query param e.g., /careers?stream=arts
+  useEffect(() => {
+    const params = new URLSearchParams(location.search);
+    const stream = String(params.get('stream') || '').toLowerCase();
+    const allowed = ['all', 'science', 'arts', 'commerce', 'emerging'];
+    if (allowed.includes(stream)) {
+      setSelectedStream(stream);
+      // Clear any open items; another effect will open a few by default
+      setOpenCareerIds(new Set());
+    }
+  }, [location.search]);
+
+  // When a specific stream is selected, auto-open the first 3 designations to focus the user
+  useEffect(() => {
+    if (selectedStream && selectedStream !== 'all') {
+      const list = getFilteredCareers();
+      const initialOpen = new Set(list.slice(0, 3).map((c, idx) => c.id ?? `${selectedStream}-${idx}`));
+      setOpenCareerIds(initialOpen);
+    }
+  // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [selectedStream]);
 
   const toggleAccordion = (careerId) => {
     const newOpenIds = new Set(openCareerIds);
